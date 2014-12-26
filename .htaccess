@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine on
+ RewriteBase /ci_auto_complete
+ 
+ #Removes access to the system folder by users.
+ RewriteCond %{REQUEST_URI} ^system.*
+ RewriteRule ^(.*)$ ci/index.php/$1 [L]
+
+ #Checks to see if the user is attempting to access a valid file
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REWRITE_FILENAME} !-d
+ 
+ #Enable access to the images and css folders, and the robots.txt file
+ RewriteCond $1 !^(index\.php|public|robots\.txt)
+ RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
