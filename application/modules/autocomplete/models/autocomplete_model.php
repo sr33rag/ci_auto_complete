@@ -1,5 +1,10 @@
 <?php
  if(!defined('BASEPATH')) exit('No direct script access is allowed3');
+ /**
+  * This forms the data access layer
+  * @author Sreerag
+  *
+  */
  class Autocomplete_model extends CI_Model {
  	protected $CI;
  	public function __construct() {

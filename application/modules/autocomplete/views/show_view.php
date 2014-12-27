@@ -79,7 +79,7 @@
       source: 
        function(req, add){
         $.ajax({
-          url: "autocomplete/lookup",
+          url: "<?php echo base_url('autocomplete/lookup');?>",
           dataType: 'json',
           type: 'POST',
           data: req,
