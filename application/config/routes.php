@@ -38,11 +38,11 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "autocomplete";
 $route['404_override'] = '';
-
-$route['auth/(:any)'] = "auth/$1";
-$route['auth/(.*)'] = 'auth/$1';
+$route['autocomplete']="autocomplete";
+// $route['auth/(:any)'] = "auth/$1";
+// $route['auth/(.*)'] = 'auth/$1';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

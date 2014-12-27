@@ -57,7 +57,7 @@ class MX_Router extends CI_Router
 		}
 		
 		/* no controller found */
-		show_404(implode('/', $segments));
+		show_404();
 	}
 	
 	/** Locate the controller **/
